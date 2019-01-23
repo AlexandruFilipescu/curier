@@ -30,12 +30,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `awb` (
   `id` int(11) NOT NULL,
-  `nume` varchar(255) NOT NULL,
-  `prenume` varchar(255) NOT NULL,
-  `telefon` varchar(14) NOT NULL,
+  `nume_prenume_expeditor` varchar(255) NOT NULL,
+  `nume_prenume_destinatar` varchar(255) NOT NULL,
+  `detalii_expeditor` text NOT NULL,
+  `detalii_destinatar` text NOT NULL,
   `awb` varchar(12) NOT NULL,
-  `detalii` text NOT NULL,
-  `data` datetime NOT NULL
+  `data` datetime NOT NULL,
+  `status` varchar(20) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
