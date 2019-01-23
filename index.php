@@ -9,8 +9,16 @@ include_once('template_parts/header.php');
 <main role="main" class="container">
 
 <div class="starter-template">
-  <h1>Bootstrap starter template</h1>
-  <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+  <h1>Quicksilver Express Courier </h1>
+  <img class="logo" src="\img\QS_logo.png">  
+</div>
+<div class="row buttons-row">
+  <a href="create.php">
+  <button type="button" class="btn btn-primary button">Place order</button>
+  </a>
+  <a href="verify.php">
+  <button type="button" class="btn btn-primary button">Verify order</button>
+  </a>
 </div>
 
 </main><!-- /.container -->
