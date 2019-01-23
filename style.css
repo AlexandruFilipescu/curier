@@ -5,3 +5,20 @@ body {
     padding: 3rem 1.5rem;
     text-align: center;
   }
+.logo {
+  width:50%;
+}
+
+.buttons-row{
+  margin-left: 40%;
+  padding: 5px;
+}
+.button {
+  margin:5px;
+}
+.btn-primary{
+  background-color:#323E48;
+}
+.logo-create{
+  width:25%;
+}
