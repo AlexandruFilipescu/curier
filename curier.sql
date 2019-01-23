@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Gazdă: 127.0.0.1
--- Timp de generare: ian. 23, 2019 la 05:46 PM
--- Versiune server: 10.1.36-MariaDB
--- Versiune PHP: 7.2.11
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 23, 2019 at 06:40 PM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,45 +19,27 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Bază de date: `curier`
+-- Database: `curier`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `awb`
+-- Table structure for table `awb`
 --
 
-CREATE TABLE `awb` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `awb`;
+CREATE TABLE IF NOT EXISTS `awb` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nume_prenume_expeditor` varchar(255) NOT NULL,
   `nume_prenume_destinatar` varchar(255) NOT NULL,
   `detalii_expeditor` text NOT NULL,
   `detalii_destinatar` text NOT NULL,
   `awb` varchar(12) NOT NULL,
   `data` datetime NOT NULL,
-  `status` varchar(20) NOT NULL,
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Indexuri pentru tabele eliminate
---
-
---
--- Indexuri pentru tabele `awb`
---
-ALTER TABLE `awb`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pentru tabele eliminate
---
-
---
--- AUTO_INCREMENT pentru tabele `awb`
---
-ALTER TABLE `awb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  `status` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
