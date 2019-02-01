@@ -1,8 +1,9 @@
 <?php
 include_once('config.php');
-// Pentru a Genera un string(AWB) nou de 12 caratere si pentru a il insera in baza de date.
-// Trebuie doar sa folosesti echo generare_string_nimereala() pentru a crea un string nou, dar si
-// pentru a il insera in baza de date, poti schimba lungimea sirului daca intre acolade, scrii $lungime = 10 
+include_once('src/BarcodeGenerator.php');
+include_once('src/BarcodeGeneratorHTML.php');
+include_once('src/BarcodeGeneratorSVG.php');
+
 function  generare_string_nimereala($lungime = 12){
             $caractere = '0123456789';
             $lungime_caractere = strlen($caractere);
@@ -24,6 +25,17 @@ function  generare_string_nimereala($lungime = 12){
 
 
         $conn->query($awb_insert) or die(mysqli_error($conn));
+
+
+
+        
+        function generare_cod_bare(){
+            global $awb;
+            $generator = new Picqer\Barcode\BarcodeGeneratorSVG();
+            return $generator->getBarcode($awb, $generator::TYPE_CODE_128);
+      }
+
+      echo generare_cod_bare();
 
 
       ?>
