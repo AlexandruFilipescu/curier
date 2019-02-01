@@ -13,7 +13,7 @@ include_once('template_parts/header.php');
   <h1 class="display-4">Tracking Number</h1>
   <p class="lead">Insert the tracking number</p>
   <hr>
-  <form action="awb_verify.php" method="get">
+  <form action="awb_verify.php" method="GET">
   <input type="text" name="awb"><br><br>
   <button class="btn btn-primary" type="submit" name="report">Verify</button>
 </form>
